@@ -13,7 +13,12 @@ import java.util.stream.Stream;
 public class FilterUsingReduce {
 
     public static <I> List<I> filter(Stream<I> stream, Predicate<I> predicate) {
-        return Exercises.replaceThisWithSolution();
+        return stream.sequential().reduce(new ArrayList<I>(), (acc, x) -> {
+            if (predicate.test(x)) {
+                acc.add(x);
+            }
+            return acc;
+        }, (List<I> left, List<I> right) -> left);
     }
 
 }

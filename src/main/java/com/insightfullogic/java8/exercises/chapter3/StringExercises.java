@@ -10,12 +10,14 @@ public class StringExercises {
 
     // Question 7
     public static int countLowercaseLetters(String string) {
-        return Exercises.replaceThisWithSolution();
+        return (int) string.chars()
+                .filter(codePoint -> Character.isLowerCase(codePoint))
+                .count();
     }
 
     // Question 8
     public static Optional<String> mostLowercaseString(List<String> strings) {
-        return Exercises.replaceThisWithSolution();
+        return strings.stream()
+                .max(Comparator.comparing(target -> countLowercaseLetters(target)));
     }
-
 }

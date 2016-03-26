@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 import static com.insightfullogic.java8.examples.chapter3.StreamExercises.*;
 import static org.junit.Assert.assertEquals;
 
-public class StreamExercisesTest {
+public class ExamplesExercisesTest {
 
     @Test
     public void external() {
